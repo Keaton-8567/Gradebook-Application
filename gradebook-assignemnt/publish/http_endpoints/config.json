@@ -1,6 +1,6 @@
 [
     {
-        "http_method": "POST",
+        "http_method": "GET",
         "route": "/Testing_Endpoint",
         "function_name": "Test_Function",
         "validation_method": "NO_VALIDATION",
