@@ -1,3 +1,4 @@
+import { MongoClient } from "mongodb";
 
 exports = async function run() {
     const uri = "mongodb+srv://Keaton-Kuykendall:KkGM1999*@grade-book-assignment.rwrxncz.mongodb.net/?retryWrites=true&w=majority&appName=Grade-Book-Assignment";
