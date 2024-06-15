@@ -1,3 +1,3 @@
-exports = function() {
-  return `Hello!`
+exports = function(name) {
+  return name
 }
