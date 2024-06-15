@@ -1,3 +1,3 @@
 exports = function(name) {
-  return name.query
+  return name.query["name"]
 }
