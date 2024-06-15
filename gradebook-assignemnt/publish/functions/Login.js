@@ -4,7 +4,7 @@ exports = async function(context, request, collection) {
   // Connect to the info database and teachers collection
   const realm = context.services.get("mongodb-atlas");
   const db = realm.db("info");
-  const teachers = db.collection("teachers");
+  const teachers = db.collection("Teachers");
 
   // Find the teacher document with the matching username
   const teacher = await teachers.find({ username: username }).limit(1).toArray();
