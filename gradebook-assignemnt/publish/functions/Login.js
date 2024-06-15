@@ -1,19 +1,15 @@
-exports = async function(context, request, collection) {
-  const username = request.payload.username; // Assuming username is sent in the request payload
+exports = async function run() {
+    // Get the database and collection on which to run the operation
+    const database = client.db("info");
+    const movies = database.collection("Teachers");
 
-  // Connect to the info database and teachers collection
-  const realm = context.services.get("mongodb-atlas");
-  const db = realm.db("info");
-  const teachers = db.collection("Teachers");
+    // Query for a movie that has the title 'The Room'
+    const query = { username: "Prem.Kattel" };
 
-  // Find the teacher document with the matching username
-  const teacher = await teachers.find({ username: username }).limit(1).toArray();
+    // Execute query
+    const user = await movies.findOne(query);
 
-  // Check if a teacher was found
-  if (teacher.length === 0) {
-    return {statusCode: 404, body: "Username not found"}; // Set status code to 404 for Not Found
-  }
+    // Print the document returned by findOne()
+    return user;
+}
 
-  // Return the username if found
-  return {statusCode: 200, body: { username: teacher[0].username }};
-};
