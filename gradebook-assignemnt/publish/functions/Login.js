@@ -1,5 +1,7 @@
 exports =  function(args) {
   var collection = context.services.get("mongodb-atlas").db("info").collection("Teachers");
+
+  let data = JSON.strigify(collection.findOne({user: args.query["username"]}))
   
-  return collection.findOne({user: args.query["username"]}).user
+  return data
 }
