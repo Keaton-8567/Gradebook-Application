@@ -1,0 +1,33 @@
+.Login {
+    color: white;
+    columns: auto;
+    justify-content: center;
+    margin-top: 10%;
+    font-size: 25px;
+}
+.Username_Field {
+    display: flex;
+    justify-content: center;
+    margin-top: -1%;
+}
+.Username_text_box {
+    max-height: 15px;
+    margin-top: 2.25%;
+    margin-left: 1%;
+}
+
+.Password_Field {
+    display: flex;
+    justify-content: center;
+    margin-top: -4.5%;
+    margin-left: 0.46%;
+}
+
+.Password_text_box {
+    max-height: 15px;
+    margin-top: 2.25%;
+    margin-left: 1.9%;
+}
+.Password_text {
+    margin-right: -0.9%;
+}
