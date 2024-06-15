@@ -1,3 +1,3 @@
 exports = function(name) {
-  return `Hello, ${name}`
+  return name.query
 }
