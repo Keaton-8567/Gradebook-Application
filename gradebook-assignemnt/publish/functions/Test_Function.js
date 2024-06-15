@@ -1,3 +1,4 @@
 exports = function(name) {
-  return name.query["name"]
+  Bob_name =  name.query["name"]
+  return "hello " + Bob_name 
 }
