@@ -3,7 +3,7 @@ exports = async function(args) {
 
   let data = await collection.findOne({user: args.query["username"]});
 
-  let test = data.last_name;
+  let test = data.user;
   
   return test
 }
