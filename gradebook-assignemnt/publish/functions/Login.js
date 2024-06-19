@@ -9,8 +9,7 @@ exports = async function(args) {
     let student_information = {} 
     
     for(i in data.students) {
-      //student_information[i] = await student_collection.findOne({user: i});
-      student_information[i] = "test"
+      student_information[data.students[i]] = await student_collection.findOne({user: data.students[i]});
      }
     
     resonse = JSON.stringify({
