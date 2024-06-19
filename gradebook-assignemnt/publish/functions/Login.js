@@ -5,7 +5,9 @@ exports = async function(args) {
   let resonse = "Invalid Username or Password"
   
   if (data.user === args.query["username"]) {
-     resonse = data.students;  
+     resonse = JSON.stringify({
+       "students": data.students
+     });  
   }
   
   return resonse
