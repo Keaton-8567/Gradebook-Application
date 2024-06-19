@@ -4,7 +4,7 @@ exports = async function(args) {
   let data = await collection.findOne({user: args.query["username"]});
   let resonse = "Invalid Username or Password"
   
-  if (data.user === args.query["username"]) {
+  if (data.user === args.query["username"] && data.password === args.query["password"]) {
      resonse = JSON.stringify({
        "Login": "accepted",
        "students": data.students
