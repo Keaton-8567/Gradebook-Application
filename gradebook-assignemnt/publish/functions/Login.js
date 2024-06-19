@@ -3,7 +3,7 @@ exports = async function(args) {
   var student_collection = context.services.get("mongodb-atlas").db("info").collection("Students");
 
   let data = await collection.findOne({user: args.query["username"]});
-  let resonse = "Invalid Username or Password"
+  let resonse = JSON.stringify({"Login": "failed", "Error": "Incorrect Username or Password"})
   
   if (data.user === args.query["username"] && data.password === args.query["password"]) {
     let student_information = {} 
