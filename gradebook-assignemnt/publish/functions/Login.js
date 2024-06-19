@@ -3,7 +3,7 @@ exports =  function(args) {
 
   let data = collection.findOne({user: args.query["username"]});
 
-  let test = JSON.stringify({"test": data});
+  let test = JSON.stringify(data);
   
   return test
 }
