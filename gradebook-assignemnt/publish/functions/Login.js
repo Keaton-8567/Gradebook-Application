@@ -6,6 +6,7 @@ exports = async function(args) {
   
   if (data.user === args.query["username"]) {
      resonse = JSON.stringify({
+       "Login": "accepted",
        "students": data.students
      });  
   }
