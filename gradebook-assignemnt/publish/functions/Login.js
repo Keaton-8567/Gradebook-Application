@@ -5,9 +5,15 @@ exports = async function(args) {
   let resonse = "Invalid Username or Password"
   
   if (data.user === args.query["username"] && data.password === args.query["password"]) {
-     resonse = JSON.stringify({
+    let student_information = {} 
+    
+    for(i in data.students) {
+      student_information[i] = await collection.findOne({user: i});
+     }
+    
+    resonse = JSON.stringify({
        "Login": "accepted",
-       "students": data.students
+       "students": student_information
      });  
   }
   
