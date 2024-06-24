@@ -12,22 +12,23 @@
 }
 .Username_text_box {
     max-height: 15px;
-    margin-top: 2.25%;
+    margin-top: 44px;
     margin-left: 1%;
 }
 
 .Password_Field {
     display: flex;
     justify-content: center;
-    margin-top: -4.5%;
-    margin-left: 0.46%;
+    margin-top: -4px;
+    margin-left: 0.1%;
 }
 
 .Password_text_box {
     max-height: 15px;
-    margin-top: 2.25%;
+    margin-top: 2.25px;
     margin-left: 1.9%;
 }
 .Password_text {
+    margin-top: -12px;
     margin-right: -0.9%;
 }

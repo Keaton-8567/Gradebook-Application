@@ -2,9 +2,10 @@ const axios = require('axios');
 
 async function fetchData() {
   try {
-    const response = await axios.get('https://us-east-1.aws.data.mongodb-api.com/app/application-0-slsgzid/endpoint/Testing_Endpoint', {
+    const response = await axios.get('https://us-east-1.aws.data.mongodb-api.com/app/application-0-slsgzid/endpoint/Login', {
       params: {
-        name: "Bob"
+        username: "Prem.Kattel",
+        password: "COSC-1301"
       }
     });
     return response.data; // Resolve the promise with the data
@@ -23,4 +24,6 @@ async function fetchData() {
   }
 })();
 
-console.log(fetchData())
+let data = fetchData()
+
+console.log(data)
